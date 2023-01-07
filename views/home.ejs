@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+<body>
+    <%- include("./partials/navbar.ejs") %>
+
+    <!-- Bannner -->
+
+    <div class="container-fluid container-xl my-4">
+       <div class="row">
+        <div class="col-xl-9">
+            <div class="bg-dark d-flex mb-2">
+
+                <span class="badge text-bg-info p-2 fs-4 position-relative">
+                    Breaking
+                    <span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+                        <span class="visually-hidden">New alerts</span>
+                    </span>
+                </span>
+                <a href="/" class="ms-4">
+                    <p class="lead text-light"><%= breaking.title %></p>
+                </a>
+
+            </div>
+            <div class="row">
+
+                <div class="col-lg">
+                    <a href="/<%= featuredBig._id %>">
+                        <div class="card text-bg-dark">
+                            <img 
+                                src="<%= featuredBig.poster %>" 
+                                class="card-img-top"
+                                alt="<%= featuredBig.title %>"
+                                style="height: 600px;"
+                            >
+                            <div class="card-body">
+                              <h5 class="card-title text-secondary lead">
+                                <%= featuredBig.date %> . <%= featuredBig.category %>
+                              </h5>
+                              <p class="card-text fw-400 fs-5"><%= featuredBig.title %></p>
+                            </div>
+                          </div>
+                    </a>
+                </div>
+                <div class="col-lg">
+                    <% featuredSmall.map(blog => { %>
+
+                        <a href="/<%= blog._id %>" >
+                            <div class="card text-bg-dark mb-1">
+                                <img 
+                                    src="<%= blog.poster %>" 
+                                    class="card-img-top"
+                                    alt="<%= featuredBig.title %>"
+                                    style="height: 250px; object-fit: cover;"
+                                >
+                                <div class="card-body">
+                                  <h5 class="card-title text-secondary lead">
+                                    <%= blog.date %> . <%= blog.category %>
+                                  </h5>
+                                  <p class="card-text fw-400 fs-5"><%= blog.title %></p>
+                                </div>
+                              </div>
+                        </a>
+
+                    <% }) %>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-xl-3 bg-dark">
+            <h3 class="text-light text-center p-2">Trending Posts</h3>
+            <div>
+                <% blogs.map(blog => { %>
+                    <a href="/<%= blog._id %>">
+                        <div class="row py-2 my-2">
+                            <div class="col-4">
+                                <img src="<%= blog.poster %>" alt="<%= blog.title %>" class="img-fluid" style="width: 100%; height: 95px; object-fit: cover;" >
+                            </div>
+                            <div class="col-8">
+                                <p class="text-secondary"><%= blog.date %> . <%= blog.category %></p>
+                                <p class="text-light"><%= blog.title %></p>
+                            </div>
+                        </div>
+                    </a>
+                <% }) %>
+            </div>
+        </div>
+       </div>
+    </div>
+
+    <!-- Bannner -->
+
+    <!-- Posts -->
+
+    <div class="container-lg container-fluid py-2">
+        <div class="row">
+            <div class="col-lg-8">
+                <% blogs.map(blog => { %>
+                    <a href="/<%= blog._id %>">
+                        <div class="card mb-2 text-bg-dark">
+                            <div class="row g-0">
+                              <div class="col-md-4">
+                                <img src="<%= blog.poster %>" class="img-fluid rounded-start" alt="<%= blog.title %>">
+                              </div>
+                              <div class="col-md-8">
+                                <div class="card-body">
+                                  <h5 class="card-title"><%= blog.title %></h5>
+                                  <p class="card-text"><%= blog.category %></p>
+                                  <p class="card-text">There will be some descriptions about the blog I guess. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure, illum neque? Vitae quis corrupti amet.</p>
+                                  <p class="card-text"><small class="text-muted"><%= blog.date %></small></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </a>
+                <% }) %>
+            </div>
+            <div class="d-none d-lg-block col-lg-4">
+                <div class="bg-dark p-2">
+                    <h4 class="text-light mb-4">Our Writers</h4>
+                    <div class="p-2">
+
+                        <div class="row  d-flex align-items-center mb-4">
+                            <div class="col-4">
+                                <img src="https://images.pexels.com/photos/1499327/pexels-photo-1499327.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="author" style="width: 65%; height: 75px; border-radius: 50%; object-fit: cover;">
+                            </div>
+                            <div class="col-8">
+                                <p class="text-light ps-2">
+                                    <i class="bi bi-quote"></i>
+                                    Isabella Bennit
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row  d-flex align-items-center mb-4">
+                            <div class="col-4">
+                                <img src="https://images.pexels.com/photos/2589653/pexels-photo-2589653.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="author" style="width: 65%; height: 75px; border-radius: 50%; object-fit: cover;">
+                            </div>
+                            <div class="col-8">
+                                <p class="text-light ps-2">
+                                    <i class="bi bi-quote"></i>
+                                    Chris Jermy
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row  d-flex align-items-center mb-4">
+                            <div class="col-4">
+                                <img src="https://images.pexels.com/photos/1080213/pexels-photo-1080213.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="author" style="width: 65%; height: 75px; border-radius: 50%; object-fit: cover;">
+                            </div>
+                            <div class="col-8">
+                                <p class="text-light ps-2">
+                                    <i class="bi bi-quote"></i>
+                                    Juan Gohmas
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row  d-flex align-items-center mb-4">
+                            <div class="col-4">
+                                <img src="https://images.pexels.com/photos/2726111/pexels-photo-2726111.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="author" style="width: 65%; height: 70px; border-radius: 50%; object-fit: cover;">
+                            </div>
+                            <div class="col-8">
+                                <p class="text-light ps-2">
+                                    <i class="bi bi-quote"></i>
+                                    Masha Raymerz
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Posts -->
+
+    <%- include("./partials/foot.ejs") %>
+</body>
+</html>

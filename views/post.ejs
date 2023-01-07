@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+<body>
+    <%- include("./partials/navbar.ejs") %>
+
+    <div class="container">
+        <div class="d-flex flex-column align-items-center">
+            <h2 class="text-light text-center m-4"><%= clickedBlog.title %></h2>
+            <p class="text-secondary py-4">
+                <i class="bi bi-tags-fill"></i> <%= clickedBlog.category %>, <i class="bi bi-calendar-check"></i> <%= clickedBlog.date %>
+            </p>
+            <img src="<%= clickedBlog.poster %>" alt="clickedBlog.title" style="max-width: 750px; width: 100%; height: 525px; object-fit: cover;" class="mb-4">
+            <div class="py-4">
+                <p class="lead text-light mb-4">This will be the post text ipsum dolor, sit amet consectetur adipisicing elit. Sint, eveniet numquam aliquam dicta veniam eaque cupiditate fugiat maxime voluptatibus saepe officiis nisi dolorum, possimus, deserunt maiores at delectus quam quidem debitis blanditiis eligendi! Nulla laudantium cupiditate necessitatibus ducimus odio iste, esse ipsam voluptate labore, deleniti, nesciunt quisquam. Autem recusandae excepturi incidunt ducimus laudantium nihil voluptatum corrupti numquam quas distinctio, labore, a, consectetur doloremque doloribus dignissimos id enim porro at. Porro eum ad, officiis provident autem iste, illum maxime blanditiis incidunt asperiores cupiditate sapiente! Blanditiis, quisquam. Adipisci molestias laborum, a alias debitis obcaecati magni explicabo est laboriosam minus commodi quis maxime.</p>
+                <p class="lead text-light mb-4">This will be the post text ipsum dolor, sit amet consectetur adipisicing elit. Sint, eveniet numquam aliquam dicta veniam eaque cupiditate fugiat maxime voluptatibus saepe officiis nisi dolorum, possimus, deserunt maiores at delectus quam quidem debitis blanditiis eligendi! Nulla laudantium cupiditate necessitatibus ducimus odio iste, esse ipsam voluptate labore, deleniti, nesciunt quisquam. Autem recusandae excepturi incidunt ducimus laudantium nihil voluptatum corrupti numquam quas distinctio, labore, a, consectetur doloremque doloribus dignissimos id enim porro at. Porro eum ad, officiis provident autem iste, illum maxime blanditiis incidunt asperiores cupiditate sapiente! Blanditiis, quisquam. Adipisci molestias laborum, a alias debitis obcaecati magni explicabo est laboriosam minus commodi quis maxime.</p>
+                <div class="text-secondary bg-dark p-2 mb-4">
+                    <span class="h4">**</span> <p style="font-style: italic;">
+                        This will be the post text ipsum dolor, sit amet consectetur adipisicing elit. Sint, eveniet numquam aliquam dicta veniam eaque cupiditate fugiat maxime voluptatibus saepe officiis nisi dolorum, possimus, deserunt maiores at delectus quam quidem debitis blanditiis eligendi! Nulla laudantium cupiditate necessitatibus ducimus odio iste, esse ipsam voluptate labore, deleniti, nesciunt quisquam. Autem recusandae excepturi incidunt ducimus laudantium nihil voluptatum corrupti numquam quas distinctio, labore, a, consectetur doloremque doloribus dignissimos id enim porro at. Porro eum ad, officiis provident autem iste, illum maxime blanditiis incidunt asperiores cupiditate sapiente! Blanditiis, quisquam. Adipisci molestias laborum, a alias debitis obcaecati magni explicabo est laboriosam minus commodi quis maxime.
+                    </p> <span class="h4">**</span>
+                </div>
+                <p class="lead text-light mb-4">This will be the post text ipsum dolor, sit amet consectetur adipisicing elit. Sint, eveniet numquam aliquam dicta veniam eaque cupiditate fugiat maxime voluptatibus saepe officiis nisi dolorum, possimus, deserunt maiores at delectus quam quidem debitis blanditiis eligendi! Nulla laudantium cupiditate necessitatibus ducimus odio iste, esse ipsam voluptate labore, deleniti, nesciunt quisquam. Autem recusandae excepturi incidunt ducimus laudantium nihil voluptatum corrupti numquam quas distinctio, labore, a, consectetur doloremque doloribus dignissimos id enim porro at. Porro eum ad, officiis provident autem iste, illum maxime blanditiis incidunt asperiores cupiditate sapiente! Blanditiis, quisquam. Adipisci molestias laborum, a alias debitis obcaecati magni explicabo est laboriosam minus commodi quis maxime.</p>
+                <p class="lead text-light mb-4">This will be the post text ipsum dolor, sit amet consectetur adipisicing elit. Sint, eveniet numquam aliquam dicta veniam eaque cupiditate fugiat maxime voluptatibus saepe officiis nisi dolorum, possimus, deserunt maiores at delectus quam quidem debitis blanditiis eligendi! Nulla laudantium cupiditate necessitatibus ducimus odio iste, esse ipsam voluptate labore, deleniti, nesciunt quisquam. Autem recusandae excepturi incidunt ducimus laudantium nihil voluptatum corrupti numquam quas distinctio, labore, a, consectetur doloremque doloribus dignissimos id enim porro at. Porro eum ad, officiis provident autem iste, illum maxime blanditiis incidunt asperiores cupiditate sapiente! Blanditiis, quisquam. Adipisci molestias laborum, a alias debitis obcaecati magni explicabo est laboriosam minus commodi quis maxime.</p>
+            </div>
+        </div>
+    </div>
+    
+    <%- include("./partials/foot.ejs") %>
+</body>
+</html>

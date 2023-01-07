@@ -1,0 +1,44 @@
+{
+    "blogs": [
+        {
+            "_id": "blog01a",
+            "title": "Some random title for test blog",
+            "category": "Technology",
+            "date": "Dec 21 2022",
+            "poster": "https://images.pexels.com/photos/13945391/pexels-photo-13945391.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "featured": "big"
+        },
+        {
+            "_id": "blog02a",
+            "title": "Some random title for test blog02",
+            "category": "Technology",
+            "date": "Dec 21 2022",
+            "poster": "https://images.pexels.com/photos/11987710/pexels-photo-11987710.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+            "featured": "small"
+        },
+        {
+            "_id": "blog03a",
+            "title": "Some random title for test blog03",
+            "category": "Technology",
+            "date": "Dec 21 2022",
+            "poster": "https://images.pexels.com/photos/6829488/pexels-photo-6829488.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+            "featured": "small"
+        },
+        {
+            "_id": "blog04a",
+            "title": "Some random title for test blog04",
+            "category": "Technology",
+            "date": "Dec 21 2022",
+            "poster": "https://images.pexels.com/photos/14792098/pexels-photo-14792098.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+            "featured": "none"
+        },
+        {
+            "_id": "blog05a",
+            "title": "Some random title for test blog05",
+            "category": "Technology",
+            "date": "Dec 21 2022",
+            "poster": "https://images.pexels.com/photos/4946956/pexels-photo-4946956.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load",
+            "featured": "none"
+        }
+    ]
+}
